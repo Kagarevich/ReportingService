@@ -12,13 +12,10 @@ namespace ReportingService.Models
         public DbSet<Report> Reports { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Provider> Providers { get; set; }
-        public ApplicationContext()
+        public ApplicationContext(DbContextOptions<ApplicationContext> options)
+            : base(options)
         {
             Database.EnsureCreated();
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=usersdb;Username=postgres;Password=password");
         }
     }
 }

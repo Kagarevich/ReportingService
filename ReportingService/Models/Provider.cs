@@ -8,9 +8,12 @@ namespace ReportingService.Models
 {
     public class Provider
     {
-        [Key]
+        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Address { get; set; }
+
         public List<Service> Services { get; set; } = new List<Service>();
     }
 }
