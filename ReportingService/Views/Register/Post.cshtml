@@ -1,0 +1,33 @@
+﻿<div class="frame">
+    <div class="nav">
+        <ul class="links">
+            <li class="signin-active"><a class="btn">Войти</a></li>
+            <li class="signup-inactive"><a class="btn">Регистрация</a></li>
+        </ul>
+    </div>
+    <div ng-app ng-init="checked = false">
+        <form class="form-signin" action="" method="post" name="form">
+            <label for="username">Логин</label>
+            <input class="form-styling" type="text" name="username" placeholder=""/>
+            <label for="password">Пароль</label>
+            <input class="form-styling" type="text" name="password" placeholder=""/>
+            <input type="checkbox" id="checkbox"/>
+            <label for="checkbox" ><span class="ui"></span>Запомнить меня</label>
+            <div class="btn-animate">
+                <a class="btn-signin">Авторизация</a>
+            </div>
+        </form>
+        
+        <form class="form-signup" action="" method="post" name="form">
+            <label for="fullname">Логин</label>
+            <input class="form-styling" type="text" name="fullname" placeholder=""/>
+            <label for="email">Email</label>
+            <input class="form-styling" type="text" name="email" placeholder=""/>
+            <label for="password">Пароль</label>
+            <input class="form-styling" type="text" name="password" placeholder=""/>
+            <label for="confirmpassword">Подтвердите пароль</label>
+            <input class="form-styling" type="text" name="confirmpassword" placeholder=""/>
+            <a ng-click="checked = !checked" class="btn-signup">Регистрация</a>
+        </form>
+    </div>
+</div>
